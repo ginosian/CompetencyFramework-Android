@@ -1,0 +1,74 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+        classpath 'com.squareup.sqldelight:gradle-plugin:0.5.1'
+        classpath 'com.google.gms:google-services:3.0.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.0.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+ext {
+    minSdk = 21
+    targetSdk = 24
+    compileSdkVersion = 23
+    buildToolsVersion = '23.0.1'
+    versionCode = 7
+    versionName = "0.1.6"
+    applicationId = "com.margin.competencyframework"
+
+    // Libraries
+    supportLibVersion = '24.1.1'
+    playServicesVersion = '9.2.1'
+
+    butterknifeVersion = '7.0.1'
+    retrofitVersion = '2.0.2'
+    gsonConverterVersion = '2.0.2'
+    okhttpVersion = '3.2.0'
+    okhttpInterceptorVersion = '3.0.1'
+    rxjavaVersion = '1.1.1'
+    rxandroidVersion = '1.1.0'
+    rxjavaRetrofitAdapter = '2.0.2'
+    dagger2Version = '2.0.1'
+    javaxAnnotation = '1.2'
+    rxbindingVersion = '0.4.0'
+    rxRelay = '1.1.0'
+    glideVersion = '3.7.0'
+    gsonVersion = '2.6.2'
+    jetbrainsAnnotation = '15.0'
+    sqlBriteVersion = '0.6.3'
+    roundedImageViewVersion = '2.2.1'
+    zxingVersion = '1.8.4'
+    scaleImageViewVersion = '3.5.0'
+
+    jUnitVersion = '4.12'
+}
